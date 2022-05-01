@@ -34,23 +34,10 @@ const LENS_HUB_NFT_SYMBOL = 'LPP';
 
 export let runtimeHRE: HardhatRuntimeEnvironment;
 
-/**
- * @dev Note that this script uses the default ethers signers.
- * Care should be taken to also ensure that the following addresses end up properly set:
- *    1. LensHub Proxy Admin
- *    2. LensHub Governance
- *    3. ModuleGlobals Governance
- *    3. ModuleGlobals Treasury
- *
- * Furthermore, This script is a variation of the standard full-deploy-verify script, it still does not whitelist profile
- * creators or deploy/whitelist a currency, but it *does* deploy a profile creation proxy.
- */
 task(
   'testnet-full-deploy-verify',
   'deploys the entire Lens Protocol with explorer verification (testnet)'
 ).setAction(async ({}, hre) => {
-  // Note that the use of these signers is a placeholder and is not meant to be used in
-  // production.
   runtimeHRE = hre;
   const ethers = hre.ethers;
   const accounts = await ethers.getSigners();
@@ -58,7 +45,6 @@ task(
   const governance = accounts[1];
   const treasuryAddress = accounts[2].address;
 
-  // Nonce management in case of deployment issues
   let deployerNonce = await ethers.provider.getTransactionCount(deployer.address);
 
   console.log('\n\t -- Deploying Module Globals --');
