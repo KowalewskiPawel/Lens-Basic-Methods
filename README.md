@@ -81,6 +81,27 @@ Cleanup leftover Docker containers:
 USERID=$UID docker-compose down
 ```
 
+
+# How to use it
+
+1. `npm i`
+2. `npm run compile`
+3. `npx hardhat node`
+4. Open a second terminal and run the following command `npm run full-deploy-local`
+
+You can use following commands, once there is a local node running in the background
+
+Unpause the Protocol: `npm run full-deploy-local`
+
+Create a Profile: `npx hardhat create-profile --network localhost`
+
+Publish a Post: `npx hardhat post --network localhost`
+
+Follow Profile: `npx hardhat follow --network localhost`
+
+Collect Publications: `npx hardhat collect --network localhost`
+
+
 ## Protocol Overview
 
 The Lens Protocol transfers ownership of social graphs to the participants of that graph themselves. This is achieved by creating direct links between `profiles` and their `followers`, while allowing fine-grained control of additional logic, including monetization, to be executed during those interactions on a profile-by-profile basis.
