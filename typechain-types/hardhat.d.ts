@@ -149,6 +149,10 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.ProfileFollowModule__factory>;
     getContractFactory(
+      name: "SecretCodeFollowModule",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.SecretCodeFollowModule__factory>;
+    getContractFactory(
       name: "FollowValidationModuleBase",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.FollowValidationModuleBase__factory>;
@@ -431,6 +435,11 @@ declare module "hardhat/types/runtime" {
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.ProfileFollowModule>;
+    getContractAt(
+      name: "SecretCodeFollowModule",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.SecretCodeFollowModule>;
     getContractAt(
       name: "FollowValidationModuleBase",
       address: string,

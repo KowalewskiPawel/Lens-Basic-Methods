@@ -35,6 +35,7 @@ export type { ApprovalFollowModule } from "./ApprovalFollowModule";
 export type { FeeFollowModule } from "./FeeFollowModule";
 export type { FollowValidatorFollowModuleBase } from "./FollowValidatorFollowModuleBase";
 export type { ProfileFollowModule } from "./ProfileFollowModule";
+export type { SecretCodeFollowModule } from "./SecretCodeFollowModule";
 export type { FollowValidationModuleBase } from "./FollowValidationModuleBase";
 export type { ModuleBase } from "./ModuleBase";
 export type { ModuleGlobals } from "./ModuleGlobals";
@@ -98,6 +99,7 @@ export { ApprovalFollowModule__factory } from "./factories/ApprovalFollowModule_
 export { FeeFollowModule__factory } from "./factories/FeeFollowModule__factory";
 export { FollowValidatorFollowModuleBase__factory } from "./factories/FollowValidatorFollowModuleBase__factory";
 export { ProfileFollowModule__factory } from "./factories/ProfileFollowModule__factory";
+export { SecretCodeFollowModule__factory } from "./factories/SecretCodeFollowModule__factory";
 export { FollowValidationModuleBase__factory } from "./factories/FollowValidationModuleBase__factory";
 export { ModuleBase__factory } from "./factories/ModuleBase__factory";
 export { ModuleGlobals__factory } from "./factories/ModuleGlobals__factory";
